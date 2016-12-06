@@ -1,6 +1,6 @@
 class Heyoffline
 
-  version: '1.1'
+  version: '1.1.3'
 
   # default options
   options:
@@ -126,12 +126,12 @@ class Heyoffline
 
   showMessage: ->
     @createElements()
-    @options.onOnline.call @ if @options.onOnline
+    @options.onOffline.call @ if @options.onOffline
 
   hideMessage: (event) =>
     event.preventDefault() if event
     @destroyElements()
-    @options.onOffline.call @ if @options.onOffline
+    @options.onOnline.call @ if @options.onOnline
 
   # extend object with another objects
   _extend : (destination, source) ->
