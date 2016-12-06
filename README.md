@@ -22,6 +22,13 @@ new Heyoffline({
   elements: ['.monitoredFields']
 });
 ```
+
+### Compile coffee to js
+
+The `heyoffline.coffee` can be compiled to plain javascript with the following command
+
+`coffee --compile --bare heyoffline.coffee`
+
 ## Options
 
 <table>
